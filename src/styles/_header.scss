@@ -1,0 +1,27 @@
+.header{
+  &__main{
+    &--list{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 30px 20px;
+      list-style-type: none;
+      @media (min-width:700px){
+        padding: 30px 50px;
+      }
+    }
+    &--title{
+      font-size: 1rem;
+      font-weight: 700;
+      @media (min-width:700px){
+        font-size: 2rem;
+      }
+    }
+    &--link{
+      font-size: 1rem;
+      @media (min-width:700px){
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.search{
+  &__main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &--input{
+      height: 50px;
+      width: 80%;
+      border-radius: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    &--options{
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      &>*{
+        min-width: 100px;
+        border-radius: 10px;
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        background-color: $primary-color;
+        color: $black;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover{
+          cursor: pointer;
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  &__result{
+    width: 80%;
+    margin: 20px auto;
+    // margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    @media (min-width:850px){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    &--box{
+      // width: 33.33%;
+      position: relative;
+      padding: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &--stats{
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+
+      img{
+        width: 15px;
+        height: 15px;
+        filter: invert(1);
+      }
+    }
+
+    &--desc{
+      color: $grey;
+      opacity: 0.9;
+    }
+
+    &--date{
+      color: $primary-color;
+      font-size: 0.75rem;
+      align-self: flex-end;
+    }
+
+    &--bookmark{
+      position: absolute;
+      right: 5px;
+    }
+  }
+
+  &__repo{
+    width: 80%;
+    margin: 20px auto;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--avatar{
+      border-radius: 50%;
+      border: 2px solid $primary-color;
+    }
+
+    &--stats{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      img{
+        width: 15px;
+        height: 15px;
+        filter: invert(1);
+      }
+    }
+
+    &--desc{
+      color: $grey;
+      opacity: 0.9;
+    }
+
+    &--date{
+      color: $primary-color;
+      font-size: 0.75rem;
+    }
+
+    &--branch{
+      background: $primary-color;
+      padding: 10px 20px;
+      color: $black;
+      border-radius: 20px;
+      opacity: 0.7;
+    }
+  }
+
+  &__bookmark{
+    width: 80%;
+    margin: 20px auto;
+    // margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    text-align: center;
+    @media (min-width:850px){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+
+    &--box{
+      // width: 33.33%;
+      position: relative;
+      padding: 10px;
+      border: 1px solid $primary-color;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    &--desc{
+      color: $grey;
+      opacity: 0.9;
+    }
+  }
+}
