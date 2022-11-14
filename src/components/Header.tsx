@@ -1,6 +1,10 @@
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+	const data: any = useSelector((state) => state);
+	const addedBookMarks = data?.bookmark?.repo?.length;
+
 	return (
 		<>
 			<nav className="header__main">
@@ -12,7 +16,7 @@ const Header = () => {
 					</li>
 					<li>
 						<Link to="/bookmarks" className="header__main--link">
-							Bookmarks
+							Bookmarks - {addedBookMarks}
 						</Link>
 					</li>
 				</ul>

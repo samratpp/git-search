@@ -20,7 +20,6 @@ interface iUserData {
 }
 
 const SearchResults = () => {
-	// const [isLoading, setIsLoading] = useState('Loading');
 	const dispatch = useDispatch();
 	const data: any = useSelector((state) => state);
 	const users = data?.user?.user;
@@ -88,7 +87,11 @@ const SearchResults = () => {
 										<img src={fork} alt={full_name} /> {forks}
 									</span>
 								</div>
-								<p className="search__result--desc">{description}</p>
+								<p className="search__result--desc">
+									{description?.length > 50
+										? description.substring(0, 50) + '...'
+										: description}
+								</p>
 								<p className="search__result--date">{updated_at}</p>
 								<input
 									type="checkbox"
